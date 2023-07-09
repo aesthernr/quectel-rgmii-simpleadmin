@@ -13,7 +13,7 @@ Working in ADB is complex and running additional items not from the factory can 
 ## Installation
 ```bash
 adb push quectel-rgmii-simpleadmin /usrdata/simpleadmin
-adb shell chmod +x /usrdata/simpleadmin/scripts /usrdata/simpleadmin/www/cgi-bin
+adb shell chmod +x /usrdata/simpleadmin/scripts/* /usrdata/simpleadmin/www/cgi-bin/* /usrdata/simpleadmin/ttl/ttl-override
 adb shell mount -o remount,rw /
 adb shell cp /usrdata/simpleadmin/systemd/* /lib/systemd/system
 adb shell systemctl daemon-reload
