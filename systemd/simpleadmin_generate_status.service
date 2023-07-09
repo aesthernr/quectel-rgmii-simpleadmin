@@ -1,0 +1,10 @@
+[Unit]
+Description=Simpleadmin service to generate status from modem
+After=socat-smd11.service
+
+[Service]
+Type=oneshot
+ExecStart=/usrdata/simpleadmin/scripts/build_modem_status
+
+[Install]
+WantedBy=multi-user.target

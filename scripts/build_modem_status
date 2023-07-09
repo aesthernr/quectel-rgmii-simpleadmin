@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# First Generate Data
+/usrdata/simpleadmin/scripts/get_modem_data.py 
+
+# Parse
+if [ -f /tmp/modemstatus.txt ]
+then
+	/usrdata/simpleadmin/scripts/modemstatus_parse.sh
+fi

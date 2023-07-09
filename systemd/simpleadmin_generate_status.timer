@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer to auto run Simpleadmin update modem status
+[Timer]
+OnBootSec=0min
+OnCalendar=*-*-* *:*:00,30
+AccuracySec=1s
+Unit=simpleadmin_generate_status.service
+
+[Install]
+WantedBy=timers.target.wants
