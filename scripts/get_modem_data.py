@@ -35,6 +35,9 @@ out=b''
 while ser.in_waiting > 0:
     out += ser.read(1)
 
+if "OK" not in str(out):
+    print('HRM we dont have an OK in here')
+    sys.exit(1)
 
 f = open('/tmp/modemstatus.txt', 'w')
 f.write(out)

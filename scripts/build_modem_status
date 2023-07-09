@@ -2,9 +2,14 @@
 
 # First Generate Data
 /usrdata/simpleadmin/scripts/get_modem_data.py 
-
-# Parse
-if [ -f /tmp/modemstatus.txt ]
-then
+if [ $? -eq 0 ] 
+then 
+    # Parse
+    if [ -f /tmp/modemstatus.txt ]
+    then
 	/usrdata/simpleadmin/scripts/modemstatus_parse.sh
+    fi
+else
+    echo "Failed to Run Script"
+    exit 1
 fi

@@ -1,6 +1,6 @@
 [Unit]
 Description=Simpleadmin service to generate status from modem
-After=socat-smd11.service
+Requires=socat-smd11.service
 
 [Service]
 Type=oneshot
