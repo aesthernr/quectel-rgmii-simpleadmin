@@ -7,7 +7,7 @@
 
 
 rspr2rssi() {
-	return $(echo ${RSCP} ${BW_N} | awk '{printf "%.0f\n", (($1+10*log(12*$2)/log(10)))}')
+	echo ${RSCP} ${BW_N} | awk '{printf "%.0f\n", (($1+10*log(12*$2)/log(10)))}'
 }
 
 lte_bw() {
