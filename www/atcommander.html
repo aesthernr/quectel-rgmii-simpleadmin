@@ -21,9 +21,7 @@
                 <a class="navbar-item brand-text" href="/">
                     Quectel Simple Admin
                 </a>
-                <a role="button" 
-                   class="navbar-burger burger" 
-                   @click="isOpen = !isOpen">
+                <a role="button" class="navbar-burger burger" @click="isOpen = !isOpen">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -37,7 +35,9 @@
                     <a class="navbar-item" href="/atcommander.html">
                         ATI Commander
                     </a>
-
+                    <a class="navbar-item" href="/ttl.html">
+                        TTL Enabler
+                    </a>
                 </div>
 
             </div>
@@ -49,53 +49,55 @@
             <div class="column is-12">
                 <div class="columns">
                     <div class="column is-4">
-                        <div class="card events-card">
+                        <div class="card">
                             <header class="card-header">
                                 <p class="card-header-title">
                                     AT Command
                                 </p>
                             </header>
-                            <div class="card-table">
+                            <div class="card-content">
                                 <div class="content">
                                     <div class="field">
-                                        <p class="control has-icons-left has-icons-right">
-                                          <input class="input" type="text" placeholder="ATI" x-model="atcmd">
-                                        </p>
-                                      </div>
-                                      <div class="field">
+                                        <label class="label">AT Command</label>
+                                        <div class="control">
+                                            <input class="input" type="text" placeholder="ATI" x-model="atcmd">
+                                        </div>
+                                    </div>
+                                    <div class="field">
                                         <p class="control">
-                                          <button class="button is-success" @click="sendAtCommand()">
-                                            Send AT Command
-                                          </button>
+                                            <button class="button is-success" @click="sendAtCommand()">
+                                                Send AT Command
+                                            </button>
                                         </p>
-                                      </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="column is-8">
-                        <div class="card events-card">
+                        <div class="card">
                             <header class="card-header">
                                 <p class="card-header-title">
                                     ATI Response
                                 </p>
                             </header>
-                            <div class="card-table">
+                            <div class="card-content">
                                 <div class="content">
-                                    <textarea class="textarea" placeholder="ATI Responses Will Appear Here" rows="10" x-text="atCommandResponse"></textarea>
+                                    <textarea class="textarea" placeholder="ATI Responses Will Appear Here" rows="10"
+                                        x-text="atCommandResponse"></textarea>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
-            
+
         </div>
     </div>
 
     <script>
-    
+
         function atCommands() {
             return {
                 isLoading: false,
@@ -117,4 +119,5 @@
         }
     </script>
 </body>
+
 </html>

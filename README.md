@@ -20,10 +20,12 @@ adb shell systemctl daemon-reload
 adb shell ln -s /lib/systemd/system/simpleadmin_httpd.service /lib/systemd/system/multi-user.target.wants/
 adb shell ln -s /lib/systemd/system/simpleadmin_generate_status.service /lib/systemd/system/multi-user.target.wants/
 adb shell ln -s /lib/systemd/system/simpleadmin_generate_status.timer /lib/systemd/system/timers.target.wants/
+adb shell ln -s /lib/systemd/system/ttl-override.service /lib/systemd/system/multi-user.target.wants/
 adb shell mount -o remount,ro /
 adb shell systemctl start simpleadmin_generate_status
 adb shell systemctl start simpleadmin_generate_status.timer
 adb shell systemctl start simpleadmin_httpd
+adb shell systemctl start ttl-override
 ```
 
 ## Access Simple Admin
@@ -33,7 +35,7 @@ Launch your browser to http://192.168.225.1:8080
 
 The backend and frontend will automatically update every 30 seconds. Will implement ways to change the update time in the future but will need some additional users testing to see if this is stable enough. 
 
-## Security Notice
+### Access Notice!
 This is not password protected at the moment, please be careful if you are not CGNAT and have a public IP as this will be available to the public 
 
 ## Acknowledgements

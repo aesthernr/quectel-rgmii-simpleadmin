@@ -20,9 +20,7 @@
                 <a class="navbar-item brand-text" href="/">
                     Quectel Simple Admin
                 </a>
-                <a role="button" 
-                   class="navbar-burger burger" 
-                   @click="isOpen = !isOpen">
+                <a role="button" class="navbar-burger burger" @click="isOpen = !isOpen">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -36,7 +34,9 @@
                     <a class="navbar-item" href="/atcommander.html">
                         ATI Commander
                     </a>
-
+                    <a class="navbar-item" href="/ttl.html">
+                        TTL Enabler
+                    </a>
                 </div>
 
             </div>
@@ -101,37 +101,37 @@
                                             <tr>
                                                 <th>Provider</th>
                                                 <td x-text="csqData.PROVIDER">
-                                                    </td>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>CSQ</th>
                                                 <td x-text="csqData.CSQ">
-                                                    </td>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>Signal Strength</th>
                                                 <td x-text="csqData.CSQ_PER">
-                                                    </td>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>RSSI</th>
                                                 <td x-text="csqData.CSQ_RSSI">
-                                                    </td>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>ECIO<sup>3G</sup>/RSRQ<sup>4G</sup>/SS_RSRQ<sup>5G</sup></th>
                                                 <td x-html="csqData.ECIO">
-                                                    </td>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>RSCP<sup>3G</sup>/RSRP<sup>4G</sup>/SS_RSRP<sup>5G</sup></th>
                                                 <td x-html="csqData.RSCP">
-                                                    </td>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>SINR</th>
                                                 <td x-html="csqData.SINR">
-                                                    </td>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -156,41 +156,41 @@
                                                     <span x-text="csqData.COPS_MCC"></span>
                                                     /
                                                     <span x-text="csqData.COPS_MNC"></span>
-                                                    </td>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>RNC<sup>3G</sup>/eNB ID<sup>4G/5G</sup></th>
                                                 <td>
                                                     <span x-text="csqData.RNC"></span>
                                                     <span x-text="csqData.RNC_NUM"></span>
-                                                    </td>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>Lag<sup>3G</sup>/TAC<sup>4G/5G</sup></th>
                                                 <td>
                                                     <span x-text="csqData.LAC"></span>
                                                     <span x-text="csqData.LAC_NUM"></span>
-                                                    </td>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>Cell ID</th>
                                                 <td x-text="csqData.CID">
-                                                    </td>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>Band</th>
                                                 <td x-html="csqData.LBAND">
-                                                    </td>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>Channel</th>
                                                 <td x-text="csqData.CHANNEL">
-                                                    </td>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>PCI</th>
                                                 <td x-text="csqData.PCI">
-                                                    </td>
+                                                </td>
                                             </tr>
 
                                         </tbody>
