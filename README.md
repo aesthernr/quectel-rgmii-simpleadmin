@@ -38,5 +38,16 @@ The backend and frontend will automatically update every 30 seconds. Will implem
 ### Access Notice!
 This is not password protected at the moment, please be careful if you are not CGNAT and have a public IP as this will be available to the public 
 
+## Note About TTL Mod
+If you are currently using Nate's TTL-Override, please remove that systemd service
+
+```bash
+adb shell /etc/initscripts/ttl-override stop
+adb shell mount -o remount,rw /
+adb shell rm -v /etc/initscripts/ttl-override /lib/systemd/system/ttl-override.service /lib/systemd/system/multi-user.target.wants/ttl-override.service
+adb shell mount -o remount,ro /
+adb shell systemctl daemon-reload
+```
+
 ## Acknowledgements
 This heavily uses the AT Command Parsing Scripts (Basically a copy with minor tweaks) of Dairyman's Rooter Source https://github.com/ofmodemsandmen/ROOterSource2203
