@@ -153,16 +153,23 @@
                                             <tr>
                                                 <th>MCC MNC</th>
                                                 <td>
+                                                    <span x-text="csqData.COPS_MCC"></span>
+                                                    /
+                                                    <span x-text="csqData.COPS_MNC"></span>
                                                     </td>
                                             </tr>
                                             <tr>
                                                 <th>RNC<sup>3G</sup>/eNB ID<sup>4G/5G</sup></th>
-                                                <td x-text="csqData.RNC_NUM">
+                                                <td>
+                                                    <span x-text="csqData.RNC"></span>
+                                                    <span x-text="csqData.RNC_NUM"></span>
                                                     </td>
                                             </tr>
                                             <tr>
                                                 <th>Lag<sup>3G</sup>/TAC<sup>4G/5G</sup></th>
-                                                <td x-text="csqData.LAC_NUM">
+                                                <td>
+                                                    <span x-text="csqData.LAC"></span>
+                                                    <span x-text="csqData.LAC_NUM"></span>
                                                     </td>
                                             </tr>
                                             <tr>

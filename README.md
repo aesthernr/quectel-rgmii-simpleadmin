@@ -1,12 +1,14 @@
 # Simple Web Admin Interface for Quectel Modem using RJ45 Boards 
-Simple Admin / Monitoring web UI for Quectel modems that are connected via a RGMII Ethernet interface (aka a "RJ45 to M.2" or "Ethernet to M.2" adapter board). 
+Simple Admin / Monitoring web UI for Quectel modems that are connected via a RGMII Ethernet interface (aka a "RJ45 to M.2" or "Ethernet to M.2" adapter board). Such as <a href="https://www.aliexpress.us/item/3256804672394777.html">Generic RJ45 Board</a> or the <a href="https://www.aliexpress.us/item/3256805527880876.html">MCUZone board</a>
 
 This heavily relies on the work of <a href="https://github.com/natecarlson/">Nate</a> building on top of <a href="https://github.com/natecarlson/quectel-rgmii-at-command-client/tree/main/at_telnet_daemon">at_telnet_daemon</a> which is required prerequisite install before this will work. 
+
+## Warning
+Working in ADB is complex and running additional items not from the factory can be dangerous. Please run this with caution and be warned this comes "AS IS" without warranty and I will not be responsible for anything that happens in result of using this project.
 
 ## Requirements
 * ADB access to your modem 
 * Installing Nate's at_telnet_daemon
-
 
 ## Installation
 ```bash
@@ -28,6 +30,11 @@ adb shell systemctl start simpleadmin_httpd
 This will launch on port 8080 by default, you are welcome to change that if you do not desire to use the QCMAP_CLI in the simpleadmin_generate_status.service file. 
 
 Launch your browser to http://192.168.225.1:8080 
+
+The backend and frontend will automatically update every 30 seconds. Will implement ways to change the update time in the future but will need some additional users testing to see if this is stable enough. 
+
+## Security Notice
+This is not password protected at the moment, please be careful if you are not CGNAT and have a public IP as this will be available to the public 
 
 ## Acknowledgements
 This heavily uses the AT Command Parsing Scripts (Basically a copy with minor tweaks) of Dairyman's Rooter Source https://github.com/ofmodemsandmen/ROOterSource2203
