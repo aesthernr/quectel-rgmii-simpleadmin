@@ -6,6 +6,11 @@ This heavily relies on the work of <a href="https://github.com/natecarlson/">Nat
 ## Warning
 Working in ADB is complex and running additional items not from the factory can be dangerous. Please run this with caution and be warned this comes "AS IS" without warranty and I will not be responsible for anything that happens in result of using this project.
 
+## Tested Quectel Modems
+Currently Only the RM520 has been tested and determined working, I will be doing additional tests the For the RM502. 
+
+If you are able to test on other modems and get it working, feel free to PR.
+
 ## Requirements
 * ADB access to your modem 
 * Installing Nate's at_telnet_daemon
