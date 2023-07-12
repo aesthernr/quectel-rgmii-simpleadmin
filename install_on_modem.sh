@@ -29,6 +29,9 @@ cp -R /tmp/simpleadmin /usrdata/
 # Chmod execute on scripts and cgi-bin
 chmod +x /usrdata/simpleadmin/scripts/* /usrdata/simpleadmin/www/cgi-bin/* /usrdata/simpleadmin/ttl/ttl-override
 
+# Remount
+mount -o remount,rw /
+
 # Copy systemd init files & reload
 cp /usrdata/simpleadmin/systemd/* /lib/systemd/system
 systemctl daemon-reload
