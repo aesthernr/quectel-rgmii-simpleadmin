@@ -15,7 +15,15 @@ If you are able to test on other modems and get it working, feel free to PR.
 * ADB access to your modem 
 * Installing Nate's at_telnet_daemon
 
-## Installation
+## Installation Automated
+Script will do everything but setup Nate's at_telnet_daemon
+```bash
+adb shell wget -P /tmp https://raw.githubusercontent.com/aesthernr/quectel-rgmii-simpleadmin/main/install_on_modem.sh
+adb shell chmod +x /tmp/install_on_modem.sh
+adb shell sh /tmp/install_on_modem.sh
+```
+
+## Installation DIY
 ```bash
 adb push quectel-rgmii-simpleadmin /usrdata/simpleadmin
 adb shell chmod +x /usrdata/simpleadmin/scripts/* /usrdata/simpleadmin/www/cgi-bin/* /usrdata/simpleadmin/ttl/ttl-override
