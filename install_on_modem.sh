@@ -21,7 +21,7 @@ wget https://github.com/aesthernr/quectel-rgmii-simpleadmin/archive/refs/heads/m
 
 # Unzip
 unzip main.zip
-mv quectel-rgmii-simpleadmin-main/ simpleadmin
+cp -R quectel-rgmii-simpleadmin-main* simpleadmin/ 
 
 # Copy over to /usrdata
 cp -R /tmp/simpleadmin /usrdata/
